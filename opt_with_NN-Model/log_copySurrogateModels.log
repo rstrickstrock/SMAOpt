@@ -1,0 +1,27 @@
+which modelfile was copied where
+
+trainedModel_0.95_222_Sobol1.pth copied to maxR2-0
+trainedModel_0.85_222_Sobol1.pth copied to maxR2-1
+trainedModel_0.95_490_Sobol1.pth copied to maxR2-2
+trainedModel_0.85_877_Sobol1.pth copied to maxR2-3
+trainedModel_0.85_78_Sobol1.pth copied to maxR2-4
+trainedModel_0.95_999_Sobol1.pth copied to maxR2-5
+trainedModel_0.95_968_Sobol1.pth copied to maxR2-6
+trainedModel_0.95_951_Sobol1.pth copied to maxR2-7
+trainedModel_0.85_249_Sobol1.pth copied to maxR2-8
+trainedModel_0.95_986_Sobol1.pth copied to maxR2-9
+trainedModel_0.85_936_Sobol1.pth copied to maxR2-10
+trainedModel_0.95_634_Sobol1.pth copied to maxR2-11
+
+trainedModel_0.95_951_Sobol1.pth copied to minMAPE-0
+trainedModel_0.85_222_Sobol1.pth copied to minMAPE-1
+trainedModel_0.95_999_Sobol1.pth copied to minMAPE-2
+trainedModel_0.95_222_Sobol1.pth copied to minMAPE-3
+trainedModel_0.95_490_Sobol1.pth copied to minMAPE-4
+trainedModel_0.95_171_Sobol1.pth copied to minMAPE-5
+trainedModel_0.85_877_Sobol1.pth copied to minMAPE-6
+trainedModel_0.95_986_Sobol1.pth copied to minMAPE-7
+trainedModel_0.85_669_Sobol1.pth copied to minMAPE-8
+trainedModel_0.95_561_Sobol1.pth copied to minMAPE-9
+trainedModel_0.95_928_Sobol1.pth copied to minMAPE-10
+trainedModel_0.85_633_Sobol1.pth copied to minMAPE-11
