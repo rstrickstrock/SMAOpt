@@ -55,4 +55,6 @@ RUNNING AN OPTIMIZATION:
   
 - create directories "PhysProp" and "QMMM" in /path/to/location/
 - run fflow/main.py /path/to/config_file.cfg [-d] [-v]
+
+  
 an optimization example can be found in OPTIMIZATION_EXAMPLE
