@@ -1,5 +1,6 @@
 REPOSITORY CONTENTS:
- - fflow/                   -> contains the optimization workflow
+ - fflow/
+   - contains the optimization workflow
                             -> run the optimization workflow by calling:
                                python /path/to/main.py fflow_config_file.cfg [-d] [-v]
                                  example fflow_config_file.cfg in fflow/
