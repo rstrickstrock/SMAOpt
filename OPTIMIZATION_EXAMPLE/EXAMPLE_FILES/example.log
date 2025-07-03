@@ -1,0 +1,940 @@
+##################################
+# Starting Optimization Workflow #
+##################################
+Verbose =  False #
+Debug =  True #
+Config File = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/octane_hybrid_new.cfg #
+Fflow.__init__(): self.__config_file = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/octane_hybrid_new.cfg
+current working directory = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES #
+Fflow.__init__(): current working directory basedir = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES
+Fflow.__init__(): self.__working_directories = []
+Fflow.__init__(): self.__initial_guess = None
+Fflow.__init__(): self.__dimension = None
+Fflow.__init__(): self.__min_ffparameter_values = None
+Fflow.__init__(): self.__max_ffparameter_values = None
+######################
+Starting optimization#
+
+Fflow.run(): config = <lib.configparser.ConfigParser object at 0x7fbc0f1fc290>
+Fflow.run(): objective_function = PhysProp_QMMM_Loss
+Fflow.run(): added working directory: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp
+Fflow.run(): added working directory: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM
+Fflow.run(): self.__working_directories = ['/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM']
+Fflow.run(): parameter_file = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/parameters.par
+Fflow.run(): parameter file = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/parameters.par
+Fflow.run(): initial guess = [0.35, 0.25, 0.2761, 0.1255]
+Fflow.run(): dimension = 4
+	LossFunction.__init__(): self.__verbose = False
+	LossFunction.__init__(): self.__debug = True
+	LossFunction.__init__(): self.__dimension = 4
+	LossFunction.__init__(): self.__objective_function = PhysProp_QMMM_Loss
+	LossFunction.__init__(): self.__current_working_directory_basedir = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES
+	LossFunction.__init__(): self.__config = <lib.configparser.ConfigParser object at 0x7fbc0f1fc290>
+	LossFunction.__init__(): self.__loss_value_normalization = True
+		Loss.__init__(): self.__verbose = False
+		Loss.__init__(): self.__debug = True
+		Loss.__init__(): self.__dimension = 4
+		Loss.__init__(): self.__gradients_of_estimations = []
+	LossFunction.__init__(): sections = ['SYS', 'OPT', 'PhysProp', 'QMMM']
+	LossFunction._init_targets(): target_file = octane_density.target
+	LossFunction._init_targets(): target_file = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/octane_density.target
+	LossFunction._init_targets(): targets = [700.0]
+	LossFunction._init_targets(): following target values from section 'PhysProp' appended to target value list: [700.0]
+	LossFunction._init_weights(): wghts = 0.5
+	LossFunction._init_weights(): wghts = ['0.5']
+	LossFunction._init_weights(): weights = [0.5]
+	LossFunction._init_weights(): number_of_weights = 1
+	LossFunction._init_weights(): number_of_targets = 1
+	LossFunction._init_weights(): final_weights = [0.5]
+	LossFunction._init_weights(): following weights from section 'PhysProp' appended to list of weights: [0.5]
+	LossFunction._init_targets(): target_file = octane_molecule_target_energies.target
+	LossFunction._init_targets(): target_file = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/octane_molecule_target_energies.target
+	LossFunction._init_targets(): targets = [0.491]
+	LossFunction._init_targets(): following target values from section 'QMMM' appended to target value list: [0.491]
+	LossFunction._init_weights(): wghts = 0
+	LossFunction._init_weights(): wghts = ['0']
+	LossFunction._init_weights(): weights = [0.0]
+	LossFunction._init_weights(): number_of_weights = 1
+	LossFunction._init_weights(): number_of_targets = 1
+	LossFunction._init_weights(): final_weights = [0.0]
+	LossFunction._init_weights(): following weights from section 'QMMM' appended to list of weights: [0.0]
+	LossFunction.__init__(): targets initialized: [[700.0], [0.491]]
+	LossFunction.__init__(): weights initialized: [[0.5], [0.0]]
+Fflow.run(): loss_function = <simulation_interface.loss_function.LossFunction object at 0x7fbc0f487cd0>
+Fflow.run(): constraints_type = Force_Field_Constraints
+	ForceFieldConstraints.__init__(): self.__verbose = False
+	ForceFieldConstraints.__init__(): self.__debug = True
+	ForceFieldConstraints.__init__(): self.__initial_guess = [0.35, 0.25, 0.2761, 0.1255]
+	ForceFieldConstraints.__init__(): self.__config = <lib.configparser.ConfigParser object at 0x7fbc0f1fc290>
+	ForceFieldConstraints.__number_of_parameters: self.__verbose = 4
+	ForceFieldConstraints.__init_boundary(): boundary = 80 80 80 80
+		ForceFieldConstraints.__init_boundary(): bound = 80.0
+		ForceFieldConstraints.__init_boundary(): bound = 80.0
+		ForceFieldConstraints.__init_boundary(): bound = 80.0
+		ForceFieldConstraints.__init_boundary(): bound = 80.0
+	ForceFieldConstraints.__init_boundary(): boundaries = [80.0, 80.0, 80.0, 80.0]
+	ForceFieldConstraints.__init_boundary(): number_of_boundaries = 4
+	ForceFieldConstraints.__init_boundary(): negative_parameters = False
+	ForceFieldConstraints.__init_boundary(): self.__boundaries = [80.0, 80.0, 80.0, 80.0]
+	ForceFieldConstraints.__init_boundary(): self.__negative_parameters = False
+	ForceFieldConstraints.__admissible_domain(): number_of_parameters = 4
+	ForceFieldConstraints.__admissible_domain(): number_of_boundaries = 4
+		ForceFieldConstraints.__admissible_domain(): factor = 0.8
+		ForceFieldConstraints.__admissible_domain(): lower_parameter = 0.07
+		ForceFieldConstraints.__admissible_domain(): upper_parameter = 0.6299999999999999
+		ForceFieldConstraints.__admissible_domain(): factor = 0.8
+		ForceFieldConstraints.__admissible_domain(): lower_parameter = 0.04999999999999999
+		ForceFieldConstraints.__admissible_domain(): upper_parameter = 0.45
+		ForceFieldConstraints.__admissible_domain(): factor = 0.8
+		ForceFieldConstraints.__admissible_domain(): lower_parameter = 0.05521999999999999
+		ForceFieldConstraints.__admissible_domain(): upper_parameter = 0.49698000000000003
+		ForceFieldConstraints.__admissible_domain(): factor = 0.8
+		ForceFieldConstraints.__admissible_domain(): lower_parameter = 0.025099999999999997
+		ForceFieldConstraints.__admissible_domain(): upper_parameter = 0.2259
+	ForceFieldConstraints.__admissible_domain(): self.__min_ffparameter_values = [0.07, 0.04999999999999999, 0.05521999999999999, 0.025099999999999997]
+	ForceFieldConstraints.__admissible_domain(): self.__max_ffparameter_values = [0.6299999999999999, 0.45, 0.49698000000000003, 0.2259]
+ForceFieldConstraints - parameter boundaries initialized
+	Initial guess:  [0.35, 0.25, 0.2761, 0.1255]
+	min parameters: [0.07, 0.04999999999999999, 0.05521999999999999, 0.025099999999999997]
+	max parameters: [0.6299999999999999, 0.45, 0.49698000000000003, 0.2259]
+Fflow.run(): constraints = <simulation_interface.force_field_constraints.ForceFieldConstraints object at 0x7fbc0f304fd0>
+Fflow.run(): min_max_values = [[0.07, 0.04999999999999999, 0.05521999999999999, 0.025099999999999997], [0.6299999999999999, 0.45, 0.49698000000000003, 0.2259]]
+Fflow.run(): self.__min_ffparameter_values = [0.07, 0.04999999999999999, 0.05521999999999999, 0.025099999999999997]
+Fflow.run(): self.__max_ffparameter_values = [0.6299999999999999, 0.45, 0.49698000000000003, 0.2259]
+Fflow.run(): algorithm_type = steepest_descent
+	ArmijoStepLengthControl.__init__(): self.__verbose = False
+	ArmijoStepLengthControl.__init__(): self.__debug = True
+	ArmijoStepLengthControl.__init__(): self.__config = <lib.configparser.ConfigParser object at 0x7fbc0f1fc290>
+	ArmijoStepLengthControl.__init__(): self.__loss_function = <simulation_interface.loss_function.LossFunction object at 0x7fbc0f487cd0>
+		Simulations.__init__(): self.__verbose = False
+		Simulations.__init__(): self.__debug = True
+	ArmijoStepLengthControl.__init__(): self.__cwd = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/
+		StepLengthControl.__init__(): self.__verbose = False
+		StepLengthControl.__init__(): self.__debug = True
+		StepLengthControl.__init__(): self.__config = <lib.configparser.ConfigParser object at 0x7fbc0f1fc290>
+		StepLengthControl.__init__(): self.__sl_method = armijo
+		StepLengthControl.__init__(): self.__sl_max_iterations = 5
+		StepLengthControl.__init__(): self.__initial_step_length = None
+		StepLengthControl.__init__(): self.__sl_current_iterations = 0
+	ArmijoStepLengthControl.__init__(): self.__sl_max_iterations = 5
+	ArmijoStepLengthControl.__init__(): self.__sl_method = armijo
+	ArmijoStepLengthControl.__init__(): self.__armijo_sigma = 0.2
+	ArmijoStepLengthControl.__init__(): self.__armijo_parallel_evaluations = 1
+	ArmijoStepLengthControl.__init__(): self.__initial_step_length = 1.0
+Fflow.run(): step_length_control = <generic_optimizer.armijo_step_length_control.ArmijoStepLengthControl object at 0x7fbc0f1ff9d0>
+	SteepestDescent.__init__(): self.__verbose = False
+	SteepestDescent.__init__(): self.__debug = True
+	SteepestDescent.__init__(): self.__loss_function = <simulation_interface.loss_function.LossFunction object at 0x7fbc0f487cd0>
+	SteepestDescent.__init__(): self.__constraints = <simulation_interface.force_field_constraints.ForceFieldConstraints object at 0x7fbc0f304fd0>
+	SteepestDescent.__init__(): self.__step_length_control = <generic_optimizer.armijo_step_length_control.ArmijoStepLengthControl object at 0x7fbc0f1ff9d0>
+	SteepestDescent.__init__(): self.__config = <lib.configparser.ConfigParser object at 0x7fbc0f1fc290>
+		OptimizationAlgorithm.__init__(): self.__verbose = False
+		OptimizationAlgorithm.__init__(): self.__debug = True
+		OptimizationAlgorithm.__init__(): self.__loss_function = <simulation_interface.loss_function.LossFunction object at 0x7fbc0f487cd0>
+		OptimizationAlgorithm.__init__(): self.__constraints = <simulation_interface.force_field_constraints.ForceFieldConstraints object at 0x7fbc0f304fd0>
+		OptimizationAlgorithm.__init__(): self.__step_length_control = <generic_optimizer.armijo_step_length_control.ArmijoStepLengthControl object at 0x7fbc0f1ff9d0>
+		OptimizationAlgorithm.__init__(): self.__config = <lib.configparser.ConfigParser object at 0x7fbc0f1fc290>
+		Simulations.__init__(): self.__verbose = False
+		Simulations.__init__(): self.__debug = True
+		OptimizationAlgorithm.__init__(): self.__cwd = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/
+		OptimizationAlgorithm.__init__(): self.__max_opt_iterations = 5
+		OptimizationAlgorithm.__init__(): self.__current_iteration = 0
+		OptimizationAlgorithm.__init__(): self.__x = [0.35, 0.25, 0.2761, 0.1255]
+		OptimizationAlgorithm.__init__(): self.__threshold = 0.1
+Fflow.run(): optimization_object = <generic_optimizer.steepest_descent.SteepestDescent object at 0x7fbc0f2041d0>
+Executing Optimization Algorithm.
+		OptimizationAlgorithm.execute_optimization(): targets = [[700.0], [0.491]]
+		OptimizationAlgorithm.execute_optimization(): estimations_pp = [0.0]
+		OptimizationAlgorithm.execute_optimization(): estimations_qm = [0.0]
+		OptimizationAlgorithm.execute_optimization(): estimations = [[0.0], [0.0]]
+	LossFunction.get_function_value(): estimations_pp = [0.0]
+	LossFunction.get_function_value(): targets_pp = [700.0]
+	LossFunction.get_function_value(): weights_pp = [0.5]
+	LossFunction.get_function_value(): estimations_qm = [0.0]
+	LossFunction.get_function_value(): targets_qm = [0.491]
+	LossFunction.get_function_value(): weights_qm = [0.0]
+	LossFunction.get_function_value(): loss_fkt_value: 0.0 (initialized)
+	LossFunction.get_function_value(): set normalization_factor: 1000.0 (PP)
+		LossFunction.get_function_value(): 
+		loss function value = 0.0
+		i = 0
+		weights_pp[0] = 0.5
+		targets_pp[0] = 700.0
+		estimations_pp[0]: 0.0
+	LossFunction.get_function_value(): this_estimation_pp: 0.0
+	LossFunction.get_function_value(): loss_value = 0.0 (initialized).
+		LossFunction.get_function_value(): loss_value(0): 1.0
+			LossFunction._normalize(): normalized_value=1.0.
+		LossFunction.get_function_value(): normalized loss_value(0): 1.0
+		LossFunction.get_function_value(): loss_fkt_value: 0.5 (updated, intermediate result)
+	LossFunction.get_function_value(): set normalization_factor: 1.0 (QM)
+	LossFunction.get_function_value(): 
+		loss function value = 0.5
+		i = 0
+		weights_qm[0] = 0.0
+		targets_qm[0] = 0.491
+		estimations_qm[0] = 0.0
+	LossFunction.get_function_value(): this_estimation_qm: 0.0
+	LossFunction.get_function_value(): loss_value = 0.0 (initialized).
+		LossFunction.get_function_value(): loss_value(0): 1.0
+			LossFunction._normalize(): normalized_value=0.6321205588285577.
+			LossFunction.get_function_value(): normalized loss_value(0): 0.6321205588285577
+	LossFunction._get_function_value(): loss_fkt_value = 0.5 (updated, intermediate result)
+	LossFunction.get_function_value(): loss_fkt_value = 0.5
+		OptimizationAlgorithm.execute_optimization(): loss_value = 0.5
+			OptimizationAlgorithm.execute_optimization(): self.__current_iteration = 1
+Starting optimization step 1
+Executing optimization Step 1
+Getting gradient.
+		OptimizationAlgorithm.get_gradient(): dimension = 4
+			OptimizationAlgorithm.get_gradient(): direction_parameter_set = [0.36, 0.25, 0.2761, 0.1255]
+			OptimizationAlgorithm.get_gradient(): direction_parameter_set = [0.35, 0.26, 0.2761, 0.1255]
+			OptimizationAlgorithm.get_gradient(): direction_parameter_set = [0.35, 0.25, 0.2861, 0.1255]
+			OptimizationAlgorithm.get_gradient(): direction_parameter_set = [0.35, 0.25, 0.2761, 0.1355]
+		OptimizationAlgorithm.get_gradient(): gradient_parameter_sets = [[0.36, 0.25, 0.2761, 0.1255], [0.35, 0.26, 0.2761, 0.1255], [0.35, 0.25, 0.2861, 0.1255], [0.35, 0.25, 0.2761, 0.1355]]
+		OptimizationAlgorithm.get_gradient(): steering_script_pp = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_steering.sh
+		OptimizationAlgorithm.get_gradient(): simulation_cwd_pp = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp
+		Simulations.create_execute_simulation_command(): command = ['sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_steering.sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp', 'g', '1', '0', '0.35', '0.25', '0.2761', '0.1255']
+		Simulations.create_execute_simulation_command(): simulation_results_dir = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp/g.1.0
+		OptimizationAlgorithm.get_gradient(): execute_sim_command = ['sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_steering.sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp', 'g', '1', '0', '0.35', '0.25', '0.2761', '0.1255']
+		OptimizationAlgorithm.get_gradient(): sim_results_dir = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp/g.1.0
+		OptimizationAlgorithm.get_gradient(): sim_pp = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+		OptimizationAlgorithm.get_gradient(): sim_stdout = b"711.7820434570312\nWrote prediction(s) to file: 'this_prediction.csv'.\n"
+		OptimizationAlgorithm.get_gradient(): batch_job_id = 1
+		OptimizationAlgorithm.get_gradient(): Submitted batch job 1
+		Simulations.create_execute_simulation_command(): command = ['sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_steering.sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp', 'g', '1', '1', '0.36', '0.25', '0.2761', '0.1255']
+		Simulations.create_execute_simulation_command(): simulation_results_dir = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp/g.1.1
+			OptimizationAlgorithm.get_gradient(): execute_sim_command = ['sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_steering.sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp', 'g', '1', '1', '0.36', '0.25', '0.2761', '0.1255']
+			OptimizationAlgorithm.get_gradient(): sim_results_dir = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp/g.1.1
+			OptimizationAlgorithm.get_gradient(): sim_pp = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+			OptimizationAlgorithm.get_gradient(): sim_stdout = b"723.9638671875\nWrote prediction(s) to file: 'this_prediction.csv'.\n"
+			OptimizationAlgorithm.get_gradient(): batch_job_id = 1
+			OptimizationAlgorithm.get_gradient(): Submitted batch job 1
+		Simulations.create_execute_simulation_command(): command = ['sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_steering.sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp', 'g', '1', '2', '0.35', '0.26', '0.2761', '0.1255']
+		Simulations.create_execute_simulation_command(): simulation_results_dir = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp/g.1.2
+			OptimizationAlgorithm.get_gradient(): execute_sim_command = ['sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_steering.sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp', 'g', '1', '2', '0.35', '0.26', '0.2761', '0.1255']
+			OptimizationAlgorithm.get_gradient(): sim_results_dir = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp/g.1.2
+			OptimizationAlgorithm.get_gradient(): sim_pp = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+			OptimizationAlgorithm.get_gradient(): sim_stdout = b"677.029296875\nWrote prediction(s) to file: 'this_prediction.csv'.\n"
+			OptimizationAlgorithm.get_gradient(): batch_job_id = 1
+			OptimizationAlgorithm.get_gradient(): Submitted batch job 1
+		Simulations.create_execute_simulation_command(): command = ['sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_steering.sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp', 'g', '1', '3', '0.35', '0.25', '0.2861', '0.1255']
+		Simulations.create_execute_simulation_command(): simulation_results_dir = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp/g.1.3
+			OptimizationAlgorithm.get_gradient(): execute_sim_command = ['sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_steering.sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp', 'g', '1', '3', '0.35', '0.25', '0.2861', '0.1255']
+			OptimizationAlgorithm.get_gradient(): sim_results_dir = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp/g.1.3
+			OptimizationAlgorithm.get_gradient(): sim_pp = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+			OptimizationAlgorithm.get_gradient(): sim_stdout = b"713.56591796875\nWrote prediction(s) to file: 'this_prediction.csv'.\n"
+			OptimizationAlgorithm.get_gradient(): batch_job_id = 1
+			OptimizationAlgorithm.get_gradient(): Submitted batch job 1
+		Simulations.create_execute_simulation_command(): command = ['sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_steering.sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp', 'g', '1', '4', '0.35', '0.25', '0.2761', '0.1355']
+		Simulations.create_execute_simulation_command(): simulation_results_dir = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp/g.1.4
+			OptimizationAlgorithm.get_gradient(): execute_sim_command = ['sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_steering.sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp', 'g', '1', '4', '0.35', '0.25', '0.2761', '0.1355']
+			OptimizationAlgorithm.get_gradient(): sim_results_dir = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp/g.1.4
+			OptimizationAlgorithm.get_gradient(): sim_pp = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+			OptimizationAlgorithm.get_gradient(): sim_stdout = b"712.1046752929688\nWrote prediction(s) to file: 'this_prediction.csv'.\n"
+			OptimizationAlgorithm.get_gradient(): batch_job_id = 1
+			OptimizationAlgorithm.get_gradient(): Submitted batch job 1
+		OptimizationAlgorithm.get_gradient(): steering_script_qm = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_steering.sh
+		OptimizationAlgorithm.get_gradient(): simulation_cwd_qm = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM
+		Simulations.lj_parameters_gmx2amber(): is_same_length = True
+			Simulations.lj_parameters_gmx2amber(): par = 0.35
+			Simulations.lj_parameters_gmx2amber(): par = 1.9643085875
+			Simulations.lj_parameters_gmx2amber(): par = 0.25
+			Simulations.lj_parameters_gmx2amber(): par = 1.4030775625
+			Simulations.lj_parameters_gmx2amber(): par = 0.2761
+			Simulations.lj_parameters_gmx2amber(): par = 0.06594535205885163
+			Simulations.lj_parameters_gmx2amber(): par = 0.1255
+			Simulations.lj_parameters_gmx2amber(): par = 0.02997516002675074
+		Simulations.lj_parameters_gmx2amber(): converted_parameters = [1.9643085875, 1.4030775625, 0.06594535205885163, 0.02997516002675074]
+		OptimizationAlgorithm.get_gradient(): current_parameter_set_amber = [1.9643085875, 1.4030775625, 0.06594535205885163, 0.02997516002675074]
+		Simulations.create_execute_simulation_command(): command = ['sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_steering.sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM', 'g', '1', '0', '1.9643085875', '1.4030775625', '0.06594535205885163', '0.02997516002675074']
+		Simulations.create_execute_simulation_command(): simulation_results_dir = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM/g.1.0
+		OptimizationAlgorithm.get_gradient(): execute_sim_command = ['sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_steering.sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM', 'g', '1', '0', '1.9643085875', '1.4030775625', '0.06594535205885163', '0.02997516002675074']
+		OptimizationAlgorithm.get_gradient(): sim_results_dir = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM/g.1.0
+		OptimizationAlgorithm.get_gradient(): sim_qm = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+		OptimizationAlgorithm.get_gradient(): sim_stdout = b''
+		OptimizationAlgorithm.get_gradient(): batch_job_id = 1
+		OptimizationAlgorithm.get_gradient(): Submitted batch job 1
+		Simulations.lj_parameters_gmx2amber(): is_same_length = True
+			Simulations.lj_parameters_gmx2amber(): par = 0.36
+			Simulations.lj_parameters_gmx2amber(): par = 2.0204316899999997
+			Simulations.lj_parameters_gmx2amber(): par = 0.25
+			Simulations.lj_parameters_gmx2amber(): par = 1.4030775625
+			Simulations.lj_parameters_gmx2amber(): par = 0.2761
+			Simulations.lj_parameters_gmx2amber(): par = 0.06594535205885163
+			Simulations.lj_parameters_gmx2amber(): par = 0.1255
+			Simulations.lj_parameters_gmx2amber(): par = 0.02997516002675074
+		Simulations.lj_parameters_gmx2amber(): converted_parameters = [2.0204316899999997, 1.4030775625, 0.06594535205885163, 0.02997516002675074]
+			OptimizationAlgorithm.get_gradient(): current_parameter_set_amber = [2.0204316899999997, 1.4030775625, 0.06594535205885163, 0.02997516002675074]
+		Simulations.create_execute_simulation_command(): command = ['sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_steering.sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM', 'g', '1', '1', '2.0204316899999997', '1.4030775625', '0.06594535205885163', '0.02997516002675074']
+		Simulations.create_execute_simulation_command(): simulation_results_dir = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM/g.1.1
+			OptimizationAlgorithm.get_gradient(): execute_sim_command = ['sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_steering.sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM', 'g', '1', '1', '2.0204316899999997', '1.4030775625', '0.06594535205885163', '0.02997516002675074']
+			OptimizationAlgorithm.get_gradient(): sim_results_dir = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM/g.1.1
+			OptimizationAlgorithm.get_gradient(): sim_qm = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+			OptimizationAlgorithm.get_gradient(): sim_stdout = b''
+			OptimizationAlgorithm.get_gradient(): batch_job_id = 1
+			OptimizationAlgorithm.get_gradient(): Submitted batch job 1
+		Simulations.lj_parameters_gmx2amber(): is_same_length = True
+			Simulations.lj_parameters_gmx2amber(): par = 0.35
+			Simulations.lj_parameters_gmx2amber(): par = 1.9643085875
+			Simulations.lj_parameters_gmx2amber(): par = 0.26
+			Simulations.lj_parameters_gmx2amber(): par = 1.459200665
+			Simulations.lj_parameters_gmx2amber(): par = 0.2761
+			Simulations.lj_parameters_gmx2amber(): par = 0.06594535205885163
+			Simulations.lj_parameters_gmx2amber(): par = 0.1255
+			Simulations.lj_parameters_gmx2amber(): par = 0.02997516002675074
+		Simulations.lj_parameters_gmx2amber(): converted_parameters = [1.9643085875, 1.459200665, 0.06594535205885163, 0.02997516002675074]
+			OptimizationAlgorithm.get_gradient(): current_parameter_set_amber = [1.9643085875, 1.459200665, 0.06594535205885163, 0.02997516002675074]
+		Simulations.create_execute_simulation_command(): command = ['sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_steering.sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM', 'g', '1', '2', '1.9643085875', '1.459200665', '0.06594535205885163', '0.02997516002675074']
+		Simulations.create_execute_simulation_command(): simulation_results_dir = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM/g.1.2
+			OptimizationAlgorithm.get_gradient(): execute_sim_command = ['sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_steering.sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM', 'g', '1', '2', '1.9643085875', '1.459200665', '0.06594535205885163', '0.02997516002675074']
+			OptimizationAlgorithm.get_gradient(): sim_results_dir = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM/g.1.2
+			OptimizationAlgorithm.get_gradient(): sim_qm = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+			OptimizationAlgorithm.get_gradient(): sim_stdout = b''
+			OptimizationAlgorithm.get_gradient(): batch_job_id = 1
+			OptimizationAlgorithm.get_gradient(): Submitted batch job 1
+		Simulations.lj_parameters_gmx2amber(): is_same_length = True
+			Simulations.lj_parameters_gmx2amber(): par = 0.35
+			Simulations.lj_parameters_gmx2amber(): par = 1.9643085875
+			Simulations.lj_parameters_gmx2amber(): par = 0.25
+			Simulations.lj_parameters_gmx2amber(): par = 1.4030775625
+			Simulations.lj_parameters_gmx2amber(): par = 0.2861
+			Simulations.lj_parameters_gmx2amber(): par = 0.06833381102512659
+			Simulations.lj_parameters_gmx2amber(): par = 0.1255
+			Simulations.lj_parameters_gmx2amber(): par = 0.02997516002675074
+		Simulations.lj_parameters_gmx2amber(): converted_parameters = [1.9643085875, 1.4030775625, 0.06833381102512659, 0.02997516002675074]
+			OptimizationAlgorithm.get_gradient(): current_parameter_set_amber = [1.9643085875, 1.4030775625, 0.06833381102512659, 0.02997516002675074]
+		Simulations.create_execute_simulation_command(): command = ['sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_steering.sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM', 'g', '1', '3', '1.9643085875', '1.4030775625', '0.06833381102512659', '0.02997516002675074']
+		Simulations.create_execute_simulation_command(): simulation_results_dir = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM/g.1.3
+			OptimizationAlgorithm.get_gradient(): execute_sim_command = ['sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_steering.sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM', 'g', '1', '3', '1.9643085875', '1.4030775625', '0.06833381102512659', '0.02997516002675074']
+			OptimizationAlgorithm.get_gradient(): sim_results_dir = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM/g.1.3
+			OptimizationAlgorithm.get_gradient(): sim_qm = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+			OptimizationAlgorithm.get_gradient(): sim_stdout = b''
+			OptimizationAlgorithm.get_gradient(): batch_job_id = 1
+			OptimizationAlgorithm.get_gradient(): Submitted batch job 1
+		Simulations.lj_parameters_gmx2amber(): is_same_length = True
+			Simulations.lj_parameters_gmx2amber(): par = 0.35
+			Simulations.lj_parameters_gmx2amber(): par = 1.9643085875
+			Simulations.lj_parameters_gmx2amber(): par = 0.25
+			Simulations.lj_parameters_gmx2amber(): par = 1.4030775625
+			Simulations.lj_parameters_gmx2amber(): par = 0.2761
+			Simulations.lj_parameters_gmx2amber(): par = 0.06594535205885163
+			Simulations.lj_parameters_gmx2amber(): par = 0.1355
+			Simulations.lj_parameters_gmx2amber(): par = 0.0323636189930257
+		Simulations.lj_parameters_gmx2amber(): converted_parameters = [1.9643085875, 1.4030775625, 0.06594535205885163, 0.0323636189930257]
+			OptimizationAlgorithm.get_gradient(): current_parameter_set_amber = [1.9643085875, 1.4030775625, 0.06594535205885163, 0.0323636189930257]
+		Simulations.create_execute_simulation_command(): command = ['sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_steering.sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM', 'g', '1', '4', '1.9643085875', '1.4030775625', '0.06594535205885163', '0.0323636189930257']
+		Simulations.create_execute_simulation_command(): simulation_results_dir = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM/g.1.4
+			OptimizationAlgorithm.get_gradient(): execute_sim_command = ['sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_steering.sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM', 'g', '1', '4', '1.9643085875', '1.4030775625', '0.06594535205885163', '0.0323636189930257']
+			OptimizationAlgorithm.get_gradient(): sim_results_dir = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM/g.1.4
+			OptimizationAlgorithm.get_gradient(): sim_qm = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+			OptimizationAlgorithm.get_gradient(): sim_stdout = b''
+			OptimizationAlgorithm.get_gradient(): batch_job_id = 1
+			OptimizationAlgorithm.get_gradient(): Submitted batch job 1
+		OptimizationAlgorithm.get_gradient(): JobIDs = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+		OptimizationAlgorithm.get_gradient(): sim_results_dirs_pp = ['/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp/g.1.0', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp/g.1.1', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp/g.1.2', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp/g.1.3', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp/g.1.4']
+		OptimizationAlgorithm.get_gradient(): sim_results_dirs_qm = ['/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM/g.1.0', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM/g.1.1', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM/g.1.2', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM/g.1.3', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM/g.1.4']
+			Simulations.get_simulation_results(): 
+				eval_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_eval.sh
+				result_dirs: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp/g.1.0
+				collect_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_collect.sh
+				cleanup_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_cleanup.sh
+			Simulations.get_simulation_results(): evaluation = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+			Simulations.get_simulation_results(): sim_stdout = b''
+			Simulations.get_simulation_results(): batch_job_id = 1
+Submitted batch job 1
+			Simulations.get_simulation_results(): 
+				eval_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_eval.sh
+				result_dirs: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp/g.1.1
+				collect_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_collect.sh
+				cleanup_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_cleanup.sh
+			Simulations.get_simulation_results(): evaluation = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+			Simulations.get_simulation_results(): sim_stdout = b''
+			Simulations.get_simulation_results(): batch_job_id = 1
+Submitted batch job 1
+			Simulations.get_simulation_results(): 
+				eval_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_eval.sh
+				result_dirs: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp/g.1.2
+				collect_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_collect.sh
+				cleanup_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_cleanup.sh
+			Simulations.get_simulation_results(): evaluation = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+			Simulations.get_simulation_results(): sim_stdout = b''
+			Simulations.get_simulation_results(): batch_job_id = 1
+Submitted batch job 1
+			Simulations.get_simulation_results(): 
+				eval_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_eval.sh
+				result_dirs: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp/g.1.3
+				collect_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_collect.sh
+				cleanup_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_cleanup.sh
+			Simulations.get_simulation_results(): evaluation = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+			Simulations.get_simulation_results(): sim_stdout = b''
+			Simulations.get_simulation_results(): batch_job_id = 1
+Submitted batch job 1
+			Simulations.get_simulation_results(): 
+				eval_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_eval.sh
+				result_dirs: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp/g.1.4
+				collect_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_collect.sh
+				cleanup_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_cleanup.sh
+			Simulations.get_simulation_results(): evaluation = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+			Simulations.get_simulation_results(): sim_stdout = b''
+			Simulations.get_simulation_results(): batch_job_id = 1
+Submitted batch job 1
+		Simulations.get_simulation_results(): JobIDs = [1, 1, 1, 1, 1]
+			Simulations.get_simulation_results(): collect = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+				Simulations.get_simulation_results(): res = b'711.7820434570312\n'
+				Simulations.get_simulation_results(): res = b''
+			Simulations.get_simulation_results(): result = [711.7820434570312]
+			Simulations.get_simulation_results(): executing cleanup script
+			Simulations.get_simulation_results(): cleanup = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+			Simulations.get_simulation_results(): collect = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+				Simulations.get_simulation_results(): res = b'723.9638671875\n'
+				Simulations.get_simulation_results(): res = b''
+			Simulations.get_simulation_results(): result = [723.9638671875]
+			Simulations.get_simulation_results(): executing cleanup script
+			Simulations.get_simulation_results(): cleanup = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+			Simulations.get_simulation_results(): collect = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+				Simulations.get_simulation_results(): res = b'677.029296875\n'
+				Simulations.get_simulation_results(): res = b''
+			Simulations.get_simulation_results(): result = [677.029296875]
+			Simulations.get_simulation_results(): executing cleanup script
+			Simulations.get_simulation_results(): cleanup = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+			Simulations.get_simulation_results(): collect = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+				Simulations.get_simulation_results(): res = b'713.56591796875\n'
+				Simulations.get_simulation_results(): res = b''
+			Simulations.get_simulation_results(): result = [713.56591796875]
+			Simulations.get_simulation_results(): executing cleanup script
+			Simulations.get_simulation_results(): cleanup = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+			Simulations.get_simulation_results(): collect = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+				Simulations.get_simulation_results(): res = b'712.1046752929688\n'
+				Simulations.get_simulation_results(): res = b''
+			Simulations.get_simulation_results(): result = [712.1046752929688]
+			Simulations.get_simulation_results(): executing cleanup script
+			Simulations.get_simulation_results(): cleanup = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+		Simulations.get_simulation_results(): results = [[711.7820434570312], [723.9638671875], [677.029296875], [713.56591796875], [712.1046752929688]]
+		OptimizationAlgorithm.get_gradient(): eval_script_pp = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_eval.sh
+		OptimizationAlgorithm.get_gradient(): collect_script_pp = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_collect.sh
+		OptimizationAlgorithm.get_gradient(): simulation_results_pp = [[711.7820434570312], [723.9638671875], [677.029296875], [713.56591796875], [712.1046752929688]]
+			Simulations.get_simulation_results(): 
+				eval_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_eval.sh
+				result_dirs: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM/g.1.0
+				collect_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_collect.sh
+				cleanup_script: None
+			Simulations.get_simulation_results(): evaluation = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+			Simulations.get_simulation_results(): sim_stdout = b'1\n'
+			Simulations.get_simulation_results(): batch_job_id = 1
+Submitted batch job 1
+			Simulations.get_simulation_results(): 
+				eval_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_eval.sh
+				result_dirs: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM/g.1.1
+				collect_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_collect.sh
+				cleanup_script: None
+			Simulations.get_simulation_results(): evaluation = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+			Simulations.get_simulation_results(): sim_stdout = b'1\n'
+			Simulations.get_simulation_results(): batch_job_id = 1
+Submitted batch job 1
+			Simulations.get_simulation_results(): 
+				eval_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_eval.sh
+				result_dirs: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM/g.1.2
+				collect_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_collect.sh
+				cleanup_script: None
+			Simulations.get_simulation_results(): evaluation = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+			Simulations.get_simulation_results(): sim_stdout = b'1\n'
+			Simulations.get_simulation_results(): batch_job_id = 1
+Submitted batch job 1
+			Simulations.get_simulation_results(): 
+				eval_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_eval.sh
+				result_dirs: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM/g.1.3
+				collect_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_collect.sh
+				cleanup_script: None
+			Simulations.get_simulation_results(): evaluation = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+			Simulations.get_simulation_results(): sim_stdout = b'1\n'
+			Simulations.get_simulation_results(): batch_job_id = 1
+Submitted batch job 1
+			Simulations.get_simulation_results(): 
+				eval_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_eval.sh
+				result_dirs: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM/g.1.4
+				collect_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_collect.sh
+				cleanup_script: None
+			Simulations.get_simulation_results(): evaluation = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+			Simulations.get_simulation_results(): sim_stdout = b'1\n'
+			Simulations.get_simulation_results(): batch_job_id = 1
+Submitted batch job 1
+		Simulations.get_simulation_results(): JobIDs = [1, 1, 1, 1, 1]
+			Simulations.get_simulation_results(): collect = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+				Simulations.get_simulation_results(): res = b'1.0\n'
+				Simulations.get_simulation_results(): res = b''
+			Simulations.get_simulation_results(): result = [1.0]
+			Simulations.get_simulation_results(): collect = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+				Simulations.get_simulation_results(): res = b'1.0\n'
+				Simulations.get_simulation_results(): res = b''
+			Simulations.get_simulation_results(): result = [1.0]
+			Simulations.get_simulation_results(): collect = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+				Simulations.get_simulation_results(): res = b'1.0\n'
+				Simulations.get_simulation_results(): res = b''
+			Simulations.get_simulation_results(): result = [1.0]
+			Simulations.get_simulation_results(): collect = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+				Simulations.get_simulation_results(): res = b'1.0\n'
+				Simulations.get_simulation_results(): res = b''
+			Simulations.get_simulation_results(): result = [1.0]
+			Simulations.get_simulation_results(): collect = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+				Simulations.get_simulation_results(): res = b'1.0\n'
+				Simulations.get_simulation_results(): res = b''
+			Simulations.get_simulation_results(): result = [1.0]
+		Simulations.get_simulation_results(): results = [[1.0], [1.0], [1.0], [1.0], [1.0]]
+		OptimizationAlgorithm.get_gradient(): eval_script_qm = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_eval.sh
+		OptimizationAlgorithm.get_gradient(): collect_script_qm = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_collect.sh
+		OptimizationAlgorithm.get_gradient(): simulation_results_qm = [[1.0], [1.0], [1.0], [1.0], [1.0]]
+	LossFunction.get_function_value(): estimations_pp = [711.7820434570312]
+	LossFunction.get_function_value(): targets_pp = [700.0]
+	LossFunction.get_function_value(): weights_pp = [0.5]
+	LossFunction.get_function_value(): estimations_qm = [1.0]
+	LossFunction.get_function_value(): targets_qm = [0.491]
+	LossFunction.get_function_value(): weights_qm = [0.0]
+	LossFunction.get_function_value(): loss_fkt_value: 0.0 (initialized)
+	LossFunction.get_function_value(): set normalization_factor: 1000.0 (PP)
+		LossFunction.get_function_value(): 
+		loss function value = 0.0
+		i = 0
+		weights_pp[0] = 0.5
+		targets_pp[0] = 700.0
+		estimations_pp[0]: 711.7820434570312
+	LossFunction.get_function_value(): this_estimation_pp: 711.7820434570312
+	LossFunction.get_function_value(): loss_value = 0.0 (initialized).
+		LossFunction.get_function_value(): loss_value(0): 0.00028329907759871666
+			LossFunction._normalize(): normalized_value=0.24670553933218398.
+		LossFunction.get_function_value(): normalized loss_value(0): 0.24670553933218398
+		LossFunction.get_function_value(): loss_fkt_value: 0.12335276966609199 (updated, intermediate result)
+	LossFunction.get_function_value(): set normalization_factor: 1.0 (QM)
+	LossFunction.get_function_value(): 
+		loss function value = 0.12335276966609199
+		i = 0
+		weights_qm[0] = 0.0
+		targets_qm[0] = 0.491
+		estimations_qm[0] = 1.0
+	LossFunction.get_function_value(): this_estimation_qm: 1.0
+	LossFunction.get_function_value(): loss_value = 0.0 (initialized).
+		LossFunction.get_function_value(): loss_value(0): 1.0746637022411554
+			LossFunction._normalize(): normalized_value=0.6585874477268996.
+			LossFunction.get_function_value(): normalized loss_value(0): 0.6585874477268996
+	LossFunction._get_function_value(): loss_fkt_value = 0.12335276966609199 (updated, intermediate result)
+	LossFunction.get_function_value(): loss_fkt_value = 0.12335276966609199
+		OptimizationAlgorithm.get_gradient(): f0 = 0.12335276966609199
+	LossFunction.get_function_value(): estimations_pp = [723.9638671875]
+	LossFunction.get_function_value(): targets_pp = [700.0]
+	LossFunction.get_function_value(): weights_pp = [0.5]
+	LossFunction.get_function_value(): estimations_qm = [1.0]
+	LossFunction.get_function_value(): targets_qm = [0.491]
+	LossFunction.get_function_value(): weights_qm = [0.0]
+	LossFunction.get_function_value(): loss_fkt_value: 0.0 (initialized)
+	LossFunction.get_function_value(): set normalization_factor: 1000.0 (PP)
+		LossFunction.get_function_value(): 
+		loss function value = 0.0
+		i = 0
+		weights_pp[0] = 0.5
+		targets_pp[0] = 700.0
+		estimations_pp[0]: 723.9638671875
+	LossFunction.get_function_value(): this_estimation_pp: 723.9638671875
+	LossFunction.get_function_value(): loss_value = 0.0 (initialized).
+		LossFunction.get_function_value(): loss_value(0): 0.0011719733277145642
+			LossFunction._normalize(): normalized_value=0.6902449105307983.
+		LossFunction.get_function_value(): normalized loss_value(0): 0.6902449105307983
+		LossFunction.get_function_value(): loss_fkt_value: 0.34512245526539914 (updated, intermediate result)
+	LossFunction.get_function_value(): set normalization_factor: 1.0 (QM)
+	LossFunction.get_function_value(): 
+		loss function value = 0.34512245526539914
+		i = 0
+		weights_qm[0] = 0.0
+		targets_qm[0] = 0.491
+		estimations_qm[0] = 1.0
+	LossFunction.get_function_value(): this_estimation_qm: 1.0
+	LossFunction.get_function_value(): loss_value = 0.0 (initialized).
+		LossFunction.get_function_value(): loss_value(0): 1.0746637022411554
+			LossFunction._normalize(): normalized_value=0.6585874477268996.
+			LossFunction.get_function_value(): normalized loss_value(0): 0.6585874477268996
+	LossFunction._get_function_value(): loss_fkt_value = 0.34512245526539914 (updated, intermediate result)
+	LossFunction.get_function_value(): loss_fkt_value = 0.34512245526539914
+			OptimizationAlgorithm.get_gradient(): fi = 0.34512245526539914
+			OptimizationAlgorithm.get_gradient(): g = 22.176968559930714
+	LossFunction.get_function_value(): estimations_pp = [677.029296875]
+	LossFunction.get_function_value(): targets_pp = [700.0]
+	LossFunction.get_function_value(): weights_pp = [0.5]
+	LossFunction.get_function_value(): estimations_qm = [1.0]
+	LossFunction.get_function_value(): targets_qm = [0.491]
+	LossFunction.get_function_value(): weights_qm = [0.0]
+	LossFunction.get_function_value(): loss_fkt_value: 0.0 (initialized)
+	LossFunction.get_function_value(): set normalization_factor: 1000.0 (PP)
+		LossFunction.get_function_value(): 
+		loss function value = 0.0
+		i = 0
+		weights_pp[0] = 0.5
+		targets_pp[0] = 700.0
+		estimations_pp[0]: 677.029296875
+	LossFunction.get_function_value(): this_estimation_pp: 677.029296875
+	LossFunction.get_function_value(): loss_value = 0.0 (initialized).
+		LossFunction.get_function_value(): loss_value(0): 0.0010768432695038466
+			LossFunction._normalize(): normalized_value=0.6593307689952916.
+		LossFunction.get_function_value(): normalized loss_value(0): 0.6593307689952916
+		LossFunction.get_function_value(): loss_fkt_value: 0.3296653844976458 (updated, intermediate result)
+	LossFunction.get_function_value(): set normalization_factor: 1.0 (QM)
+	LossFunction.get_function_value(): 
+		loss function value = 0.3296653844976458
+		i = 0
+		weights_qm[0] = 0.0
+		targets_qm[0] = 0.491
+		estimations_qm[0] = 1.0
+	LossFunction.get_function_value(): this_estimation_qm: 1.0
+	LossFunction.get_function_value(): loss_value = 0.0 (initialized).
+		LossFunction.get_function_value(): loss_value(0): 1.0746637022411554
+			LossFunction._normalize(): normalized_value=0.6585874477268996.
+			LossFunction.get_function_value(): normalized loss_value(0): 0.6585874477268996
+	LossFunction._get_function_value(): loss_fkt_value = 0.3296653844976458 (updated, intermediate result)
+	LossFunction.get_function_value(): loss_fkt_value = 0.3296653844976458
+			OptimizationAlgorithm.get_gradient(): fi = 0.3296653844976458
+			OptimizationAlgorithm.get_gradient(): g = 20.631261483155384
+	LossFunction.get_function_value(): estimations_pp = [713.56591796875]
+	LossFunction.get_function_value(): targets_pp = [700.0]
+	LossFunction.get_function_value(): weights_pp = [0.5]
+	LossFunction.get_function_value(): estimations_qm = [1.0]
+	LossFunction.get_function_value(): targets_qm = [0.491]
+	LossFunction.get_function_value(): weights_qm = [0.0]
+	LossFunction.get_function_value(): loss_fkt_value: 0.0 (initialized)
+	LossFunction.get_function_value(): set normalization_factor: 1000.0 (PP)
+		LossFunction.get_function_value(): 
+		loss function value = 0.0
+		i = 0
+		weights_pp[0] = 0.5
+		targets_pp[0] = 700.0
+		estimations_pp[0]: 713.56591796875
+	LossFunction.get_function_value(): this_estimation_pp: 713.56591796875
+	LossFunction.get_function_value(): loss_value = 0.0 (initialized).
+		LossFunction.get_function_value(): loss_value(0): 0.00037557985782623395
+			LossFunction._normalize(): normalized_value=0.31310913575316224.
+		LossFunction.get_function_value(): normalized loss_value(0): 0.31310913575316224
+		LossFunction.get_function_value(): loss_fkt_value: 0.15655456787658112 (updated, intermediate result)
+	LossFunction.get_function_value(): set normalization_factor: 1.0 (QM)
+	LossFunction.get_function_value(): 
+		loss function value = 0.15655456787658112
+		i = 0
+		weights_qm[0] = 0.0
+		targets_qm[0] = 0.491
+		estimations_qm[0] = 1.0
+	LossFunction.get_function_value(): this_estimation_qm: 1.0
+	LossFunction.get_function_value(): loss_value = 0.0 (initialized).
+		LossFunction.get_function_value(): loss_value(0): 1.0746637022411554
+			LossFunction._normalize(): normalized_value=0.6585874477268996.
+			LossFunction.get_function_value(): normalized loss_value(0): 0.6585874477268996
+	LossFunction._get_function_value(): loss_fkt_value = 0.15655456787658112 (updated, intermediate result)
+	LossFunction.get_function_value(): loss_fkt_value = 0.15655456787658112
+			OptimizationAlgorithm.get_gradient(): fi = 0.15655456787658112
+			OptimizationAlgorithm.get_gradient(): g = 3.320179821048913
+	LossFunction.get_function_value(): estimations_pp = [712.1046752929688]
+	LossFunction.get_function_value(): targets_pp = [700.0]
+	LossFunction.get_function_value(): weights_pp = [0.5]
+	LossFunction.get_function_value(): estimations_qm = [1.0]
+	LossFunction.get_function_value(): targets_qm = [0.491]
+	LossFunction.get_function_value(): weights_qm = [0.0]
+	LossFunction.get_function_value(): loss_fkt_value: 0.0 (initialized)
+	LossFunction.get_function_value(): set normalization_factor: 1000.0 (PP)
+		LossFunction.get_function_value(): 
+		loss function value = 0.0
+		i = 0
+		weights_pp[0] = 0.5
+		targets_pp[0] = 700.0
+		estimations_pp[0]: 712.1046752929688
+	LossFunction.get_function_value(): this_estimation_pp: 712.1046752929688
+	LossFunction.get_function_value(): loss_value = 0.0 (initialized).
+		LossFunction.get_function_value(): loss_value(0): 0.00029902686520042566
+			LossFunction._normalize(): normalized_value=0.2584605124395477.
+		LossFunction.get_function_value(): normalized loss_value(0): 0.2584605124395477
+		LossFunction.get_function_value(): loss_fkt_value: 0.12923025621977385 (updated, intermediate result)
+	LossFunction.get_function_value(): set normalization_factor: 1.0 (QM)
+	LossFunction.get_function_value(): 
+		loss function value = 0.12923025621977385
+		i = 0
+		weights_qm[0] = 0.0
+		targets_qm[0] = 0.491
+		estimations_qm[0] = 1.0
+	LossFunction.get_function_value(): this_estimation_qm: 1.0
+	LossFunction.get_function_value(): loss_value = 0.0 (initialized).
+		LossFunction.get_function_value(): loss_value(0): 1.0746637022411554
+			LossFunction._normalize(): normalized_value=0.6585874477268996.
+			LossFunction.get_function_value(): normalized loss_value(0): 0.6585874477268996
+	LossFunction._get_function_value(): loss_fkt_value = 0.12923025621977385 (updated, intermediate result)
+	LossFunction.get_function_value(): loss_fkt_value = 0.12923025621977385
+			OptimizationAlgorithm.get_gradient(): fi = 0.12923025621977385
+			OptimizationAlgorithm.get_gradient(): g = 0.5877486553681865
+		OptimizationAlgorithm.get_gradient(): grad = [22.176968559930714, 20.631261483155384, 3.320179821048913, 0.5877486553681865]
+Finished getting gradient.
+Gradient grad = [22.176968559930714, 20.631261483155384, 3.320179821048913, 0.5877486553681865]
+	SteepestDescent.execute_optimization_step(): f0 = 0.12335276966609199
+	SteepestDescent.execute_optimization_step(): gradient = [22.176968559930714, 20.631261483155384, 3.320179821048913, 0.5877486553681865]
+	SteepestDescent.execute_optimization_step(): descent = [-22.176968559930714, -20.631261483155384, -3.320179821048913, -0.5877486553681865]
+	SteepestDescent.execute_optimization_step(): min_parameters = [0.07, 0.04999999999999999, 0.05521999999999999, 0.025099999999999997]
+	SteepestDescent.execute_optimization_step(): max_parameters = [0.6299999999999999, 0.45, 0.49698000000000003, 0.2259]
+Calculating step length for optimization step 1
+	ArmijoStepLengthControl.calculate_step_length(): current_sl_iteration = 1
+	ArmijoStepLengthControl.calculate_step_length(): norm_descent = 30.476809666047295
+	ArmijoStepLengthControl.calculate_step_length(): descent = [-0.7276669967407047, -0.6769495137195956, -0.10894118700185869, -0.019285110935445722]
+	ArmijoStepLengthControl.calculate_step_length(): step_length = 1.0
+		StepLengthControl.is_step_length_feasible(): step = [-0.7276669967407047, -0.6769495137195956, -0.10894118700185869, -0.019285110935445722]
+			StepLengthControl.is_step_length_feasible(): new_parameter = -0.3776669967407047
+			StepLengthControl.is_step_length_feasible(): parameters  out of boundaries: too small
+		ArmijoStepLengthControl.calculate_step_length(): x_new = False
+		ArmijoStepLengthControl.calculate_step_length(): step_length not feasible.
+		ArmijoStepLengthControl.calculate_step_length(): step_length = 0.5
+		StepLengthControl.is_step_length_feasible(): step = [-0.36383349837035234, -0.3384747568597978, -0.054470593500929344, -0.009642555467722861]
+			StepLengthControl.is_step_length_feasible(): new_parameter = -0.01383349837035236
+			StepLengthControl.is_step_length_feasible(): parameters  out of boundaries: too small
+		ArmijoStepLengthControl.calculate_step_length(): x_new = False
+		ArmijoStepLengthControl.calculate_step_length(): step_length not feasible.
+		ArmijoStepLengthControl.calculate_step_length(): step_length = 0.25
+		StepLengthControl.is_step_length_feasible(): step = [-0.18191674918517617, -0.1692373784298989, -0.027235296750464672, -0.0048212777338614305]
+			StepLengthControl.is_step_length_feasible(): new_parameter = 0.1680832508148238
+			StepLengthControl.is_step_length_feasible(): new_parameter = 0.08076262157010111
+			StepLengthControl.is_step_length_feasible(): new_parameter = 0.24886470324953533
+			StepLengthControl.is_step_length_feasible(): new_parameter = 0.12067872226613857
+		StepLengthControl.is_step_length_feasible(): new_parameter_set = [0.1680832508148238, 0.08076262157010111, 0.24886470324953533, 0.12067872226613857]
+		ArmijoStepLengthControl.calculate_step_length(): x_new = [0.1680832508148238, 0.08076262157010111, 0.24886470324953533, 0.12067872226613857]
+		ArmijoStepLengthControl.calculate_step_length(): steering_script_pp = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_steering.sh
+		ArmijoStepLengthControl.calculate_step_length(): simulation_cwd_pp = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp
+		Simulations.create_execute_simulation_command(): command = ['sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_steering.sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp', 'a', '1', '1', '0.1680832508148238', '0.08076262157010111', '0.24886470324953533', '0.12067872226613857']
+		Simulations.create_execute_simulation_command(): simulation_results_dir = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp/a.1.1
+		ArmijoStepLengthControl.calculate_step_length(): execute_sim_command = ['sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_steering.sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp', 'a', '1', '1', '0.1680832508148238', '0.08076262157010111', '0.24886470324953533', '0.12067872226613857']
+		ArmijoStepLengthControl.calculate_step_length(): sim_results_dir = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp/a.1.1
+		ArmijoStepLengthControl.calculate_step_length(): sim_pp = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+		ArmijoStepLengthControl.calculate_step_length(): sim_stdout = b"649.8547973632812\nWrote prediction(s) to file: 'this_prediction.csv'.\n"
+		ArmijoStepLengthControl.calculate_step_length(): batch_job_id = 1
+Submitted batch job 1
+		ArmijoStepLengthControl.calculate_step_length(): steering_script_qm = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_steering.sh
+		ArmijoStepLengthControl.calculate_step_length(): simulation_cwd_qm = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM
+		Simulations.lj_parameters_gmx2amber(): is_same_length = True
+			Simulations.lj_parameters_gmx2amber(): par = 0.1680832508148238
+			Simulations.lj_parameters_gmx2amber(): par = 0.9433353514013565
+			Simulations.lj_parameters_gmx2amber(): par = 0.08076262157010111
+			Simulations.lj_parameters_gmx2amber(): par = 0.4532648888547496
+			Simulations.lj_parameters_gmx2amber(): par = 0.24886470324953533
+			Simulations.lj_parameters_gmx2amber(): par = 0.05944031318657097
+			Simulations.lj_parameters_gmx2amber(): par = 0.12067872226613857
+			Simulations.lj_parameters_gmx2amber(): par = 0.028823617623516425
+		Simulations.lj_parameters_gmx2amber(): converted_parameters = [0.9433353514013565, 0.4532648888547496, 0.05944031318657097, 0.028823617623516425]
+		ArmijoStepLengthControl.calculate_step_length(): x_new_amber = [0.9433353514013565, 0.4532648888547496, 0.05944031318657097, 0.028823617623516425]
+		Simulations.create_execute_simulation_command(): command = ['sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_steering.sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM', 'a', '1', '1', '0.9433353514013565', '0.4532648888547496', '0.05944031318657097', '0.028823617623516425']
+		Simulations.create_execute_simulation_command(): simulation_results_dir = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM/a.1.1
+		ArmijoStepLengthControl.calculate_step_length(): execute_sim_command = ['sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_steering.sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM', 'a', '1', '1', '0.9433353514013565', '0.4532648888547496', '0.05944031318657097', '0.028823617623516425']
+		ArmijoStepLengthControl.calculate_step_length(): sim_results_dir = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM/a.1.1
+		ArmijoStepLengthControl.calculate_step_length(): sim_qm = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+		ArmijoStepLengthControl.calculate_step_length(): sim_stdout = b''
+		ArmijoStepLengthControl.calculate_step_length(): batch_job_id = 1
+Submitted batch job 1
+		ArmijoStepLengthControl.calculate_step_length(): eval_script_pp = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_eval.sh
+		ArmijoStepLengthControl.calculate_step_length(): collect_script_pp = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_collect.sh
+			Simulations.get_simulation_results(): 
+				eval_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_eval.sh
+				result_dirs: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp/a.1.1
+				collect_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_collect.sh
+				cleanup_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_cleanup.sh
+			Simulations.get_simulation_results(): evaluation = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+			Simulations.get_simulation_results(): sim_stdout = b''
+			Simulations.get_simulation_results(): batch_job_id = 1
+Submitted batch job 1
+		Simulations.get_simulation_results(): JobIDs = [1]
+			Simulations.get_simulation_results(): collect = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+				Simulations.get_simulation_results(): res = b'649.8547973632812\n'
+				Simulations.get_simulation_results(): res = b''
+			Simulations.get_simulation_results(): result = [649.8547973632812]
+			Simulations.get_simulation_results(): executing cleanup script
+			Simulations.get_simulation_results(): cleanup = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+		Simulations.get_simulation_results(): results = [[649.8547973632812]]
+		ArmijoStepLengthControl.calculate_step_length(): simulation_results_pp = [[649.8547973632812]]
+		ArmijoStepLengthControl.calculate_step_length(): eval_script_qm = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_eval.sh
+		ArmijoStepLengthControl.calculate_step_length(): collect_script_qm = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_collect.sh
+			Simulations.get_simulation_results(): 
+				eval_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_eval.sh
+				result_dirs: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM/a.1.1
+				collect_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_collect.sh
+				cleanup_script: None
+			Simulations.get_simulation_results(): evaluation = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+			Simulations.get_simulation_results(): sim_stdout = b'1\n'
+			Simulations.get_simulation_results(): batch_job_id = 1
+Submitted batch job 1
+		Simulations.get_simulation_results(): JobIDs = [1]
+			Simulations.get_simulation_results(): collect = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+				Simulations.get_simulation_results(): res = b'1.0\n'
+				Simulations.get_simulation_results(): res = b''
+			Simulations.get_simulation_results(): result = [1.0]
+		Simulations.get_simulation_results(): results = [[1.0]]
+		ArmijoStepLengthControl.calculate_step_length(): simulation_results_qm = [[1.0]]
+	LossFunction.get_function_value(): estimations_pp = [[649.8547973632812]]
+	LossFunction.get_function_value(): targets_pp = [700.0]
+	LossFunction.get_function_value(): weights_pp = [0.5]
+	LossFunction.get_function_value(): estimations_qm = [[1.0]]
+	LossFunction.get_function_value(): targets_qm = [0.491]
+	LossFunction.get_function_value(): weights_qm = [0.0]
+	LossFunction.get_function_value(): loss_fkt_value: 0.0 (initialized)
+	LossFunction.get_function_value(): set normalization_factor: 1000.0 (PP)
+		LossFunction.get_function_value(): 
+		loss function value = 0.0
+		i = 0
+		weights_pp[0] = 0.5
+		targets_pp[0] = 700.0
+		estimations_pp[0]: [649.8547973632812]
+	LossFunction.get_function_value(): this_estimation_pp: 649.8547973632812
+	LossFunction.get_function_value(): loss_value = 0.0 (initialized).
+		LossFunction.get_function_value(): loss_value(0): 0.00513171703566854
+			LossFunction._normalize(): normalized_value=0.9940935897550404.
+		LossFunction.get_function_value(): normalized loss_value(0): 0.9940935897550404
+		LossFunction.get_function_value(): loss_fkt_value: 0.4970467948775202 (updated, intermediate result)
+	LossFunction.get_function_value(): set normalization_factor: 1.0 (QM)
+	LossFunction.get_function_value(): 
+		loss function value = 0.4970467948775202
+		i = 0
+		weights_qm[0] = 0.0
+		targets_qm[0] = 0.491
+		estimations_qm[0] = [1.0]
+	LossFunction.get_function_value(): this_estimation_qm: 1.0
+	LossFunction.get_function_value(): loss_value = 0.0 (initialized).
+		LossFunction.get_function_value(): loss_value(0): 1.0746637022411554
+			LossFunction._normalize(): normalized_value=0.6585874477268996.
+			LossFunction.get_function_value(): normalized loss_value(0): 0.6585874477268996
+	LossFunction._get_function_value(): loss_fkt_value = 0.4970467948775202 (updated, intermediate result)
+	LossFunction.get_function_value(): loss_fkt_value = 0.4970467948775202
+		ArmijoStepLengthControl.calculate_step_length(): f_new = 0.4970467948775202
+		ArmijoStepLengthControl.calculate_step_length(): step_length = 0.125
+	ArmijoStepLengthControl.calculate_step_length(): current_sl_iteration = 2
+		StepLengthControl.is_step_length_feasible(): step = [-0.09095837459258808, -0.08461868921494944, -0.013617648375232336, -0.0024106388669307153]
+			StepLengthControl.is_step_length_feasible(): new_parameter = 0.2590416254074119
+			StepLengthControl.is_step_length_feasible(): new_parameter = 0.16538131078505056
+			StepLengthControl.is_step_length_feasible(): new_parameter = 0.2624823516247677
+			StepLengthControl.is_step_length_feasible(): new_parameter = 0.12308936113306929
+		StepLengthControl.is_step_length_feasible(): new_parameter_set = [0.2590416254074119, 0.16538131078505056, 0.2624823516247677, 0.12308936113306929]
+		ArmijoStepLengthControl.calculate_step_length(): x_new = [0.2590416254074119, 0.16538131078505056, 0.2624823516247677, 0.12308936113306929]
+		ArmijoStepLengthControl.calculate_step_length(): steering_script_pp = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_steering.sh
+		ArmijoStepLengthControl.calculate_step_length(): simulation_cwd_pp = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp
+		Simulations.create_execute_simulation_command(): command = ['sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_steering.sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp', 'a', '1', '2', '0.2590416254074119', '0.16538131078505056', '0.2624823516247677', '0.12308936113306929']
+		Simulations.create_execute_simulation_command(): simulation_results_dir = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp/a.1.2
+		ArmijoStepLengthControl.calculate_step_length(): execute_sim_command = ['sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_steering.sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp', 'a', '1', '2', '0.2590416254074119', '0.16538131078505056', '0.2624823516247677', '0.12308936113306929']
+		ArmijoStepLengthControl.calculate_step_length(): sim_results_dir = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp/a.1.2
+		ArmijoStepLengthControl.calculate_step_length(): sim_pp = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+		ArmijoStepLengthControl.calculate_step_length(): sim_stdout = b"706.9192504882812\nWrote prediction(s) to file: 'this_prediction.csv'.\n"
+		ArmijoStepLengthControl.calculate_step_length(): batch_job_id = 1
+Submitted batch job 1
+		ArmijoStepLengthControl.calculate_step_length(): steering_script_qm = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_steering.sh
+		ArmijoStepLengthControl.calculate_step_length(): simulation_cwd_qm = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM
+		Simulations.lj_parameters_gmx2amber(): is_same_length = True
+			Simulations.lj_parameters_gmx2amber(): par = 0.2590416254074119
+			Simulations.lj_parameters_gmx2amber(): par = 1.4538219694506782
+			Simulations.lj_parameters_gmx2amber(): par = 0.16538131078505056
+			Simulations.lj_parameters_gmx2amber(): par = 0.9281712256773748
+			Simulations.lj_parameters_gmx2amber(): par = 0.2624823516247677
+			Simulations.lj_parameters_gmx2amber(): par = 0.0626928326227113
+			Simulations.lj_parameters_gmx2amber(): par = 0.12308936113306929
+			Simulations.lj_parameters_gmx2amber(): par = 0.029399388825133585
+		Simulations.lj_parameters_gmx2amber(): converted_parameters = [1.4538219694506782, 0.9281712256773748, 0.0626928326227113, 0.029399388825133585]
+		ArmijoStepLengthControl.calculate_step_length(): x_new_amber = [1.4538219694506782, 0.9281712256773748, 0.0626928326227113, 0.029399388825133585]
+		Simulations.create_execute_simulation_command(): command = ['sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_steering.sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM', 'a', '1', '2', '1.4538219694506782', '0.9281712256773748', '0.0626928326227113', '0.029399388825133585']
+		Simulations.create_execute_simulation_command(): simulation_results_dir = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM/a.1.2
+		ArmijoStepLengthControl.calculate_step_length(): execute_sim_command = ['sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_steering.sh', '/home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM', 'a', '1', '2', '1.4538219694506782', '0.9281712256773748', '0.0626928326227113', '0.029399388825133585']
+		ArmijoStepLengthControl.calculate_step_length(): sim_results_dir = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM/a.1.2
+		ArmijoStepLengthControl.calculate_step_length(): sim_qm = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+		ArmijoStepLengthControl.calculate_step_length(): sim_stdout = b''
+		ArmijoStepLengthControl.calculate_step_length(): batch_job_id = 1
+Submitted batch job 1
+		ArmijoStepLengthControl.calculate_step_length(): eval_script_pp = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_eval.sh
+		ArmijoStepLengthControl.calculate_step_length(): collect_script_pp = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_collect.sh
+			Simulations.get_simulation_results(): 
+				eval_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_eval.sh
+				result_dirs: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/PhysProp/a.1.2
+				collect_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_collect.sh
+				cleanup_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/density/physprop_cleanup.sh
+			Simulations.get_simulation_results(): evaluation = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+			Simulations.get_simulation_results(): sim_stdout = b''
+			Simulations.get_simulation_results(): batch_job_id = 1
+Submitted batch job 1
+		Simulations.get_simulation_results(): JobIDs = [1]
+			Simulations.get_simulation_results(): collect = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+				Simulations.get_simulation_results(): res = b'706.9192504882812\n'
+				Simulations.get_simulation_results(): res = b''
+			Simulations.get_simulation_results(): result = [706.9192504882812]
+			Simulations.get_simulation_results(): executing cleanup script
+			Simulations.get_simulation_results(): cleanup = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+		Simulations.get_simulation_results(): results = [[706.9192504882812]]
+		ArmijoStepLengthControl.calculate_step_length(): simulation_results_pp = [[706.9192504882812]]
+		ArmijoStepLengthControl.calculate_step_length(): eval_script_qm = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_eval.sh
+		ArmijoStepLengthControl.calculate_step_length(): collect_script_qm = /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_collect.sh
+			Simulations.get_simulation_results(): 
+				eval_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_eval.sh
+				result_dirs: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/QMMM/a.1.2
+				collect_script: /home/rstric3m/current_sim/SMAOpt/OPTIMIZATION_EXAMPLE/EXAMPLE_FILES/energies/qmmm_collect.sh
+				cleanup_script: None
+			Simulations.get_simulation_results(): evaluation = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+			Simulations.get_simulation_results(): sim_stdout = b'1\n'
+			Simulations.get_simulation_results(): batch_job_id = 1
+Submitted batch job 1
+		Simulations.get_simulation_results(): JobIDs = [1]
+			Simulations.get_simulation_results(): collect = <Popen: returncode: None args: ['sh', '/home/rstric3m/current_sim/SMAOpt/OPT...>
+				Simulations.get_simulation_results(): res = b'1.0\n'
+				Simulations.get_simulation_results(): res = b''
+			Simulations.get_simulation_results(): result = [1.0]
+		Simulations.get_simulation_results(): results = [[1.0]]
+		ArmijoStepLengthControl.calculate_step_length(): simulation_results_qm = [[1.0]]
+	LossFunction.get_function_value(): estimations_pp = [[706.9192504882812]]
+	LossFunction.get_function_value(): targets_pp = [700.0]
+	LossFunction.get_function_value(): weights_pp = [0.5]
+	LossFunction.get_function_value(): estimations_qm = [[1.0]]
+	LossFunction.get_function_value(): targets_qm = [0.491]
+	LossFunction.get_function_value(): weights_qm = [0.0]
+	LossFunction.get_function_value(): loss_fkt_value: 0.0 (initialized)
+	LossFunction.get_function_value(): set normalization_factor: 1000.0 (PP)
+		LossFunction.get_function_value(): 
+		loss function value = 0.0
+		i = 0
+		weights_pp[0] = 0.5
+		targets_pp[0] = 700.0
+		estimations_pp[0]: [706.9192504882812]
+	LossFunction.get_function_value(): this_estimation_pp: 706.9192504882812
+	LossFunction.get_function_value(): loss_value = 0.0 (initialized).
+		LossFunction.get_function_value(): loss_value(0): 9.770617820322601e-05
+			LossFunction._normalize(): normalized_value=0.09308466389623582.
+		LossFunction.get_function_value(): normalized loss_value(0): 0.09308466389623582
+		LossFunction.get_function_value(): loss_fkt_value: 0.04654233194811791 (updated, intermediate result)
+	LossFunction.get_function_value(): set normalization_factor: 1.0 (QM)
+	LossFunction.get_function_value(): 
+		loss function value = 0.04654233194811791
+		i = 0
+		weights_qm[0] = 0.0
+		targets_qm[0] = 0.491
+		estimations_qm[0] = [1.0]
+	LossFunction.get_function_value(): this_estimation_qm: 1.0
+	LossFunction.get_function_value(): loss_value = 0.0 (initialized).
+		LossFunction.get_function_value(): loss_value(0): 1.0746637022411554
+			LossFunction._normalize(): normalized_value=0.6585874477268996.
+			LossFunction.get_function_value(): normalized loss_value(0): 0.6585874477268996
+	LossFunction._get_function_value(): loss_fkt_value = 0.04654233194811791 (updated, intermediate result)
+	LossFunction.get_function_value(): loss_fkt_value = 0.04654233194811791
+		ArmijoStepLengthControl.calculate_step_length(): f_new = 0.04654233194811791
+Calculation of step length finished.
+	SteepestDescent.execute_optimization_step(): step_length = 0.125
+	SteepestDescent.execute_optimization_step(): f_new = 0.04654233194811791
+	SteepestDescent.execute_optimization_step(): norm_descent = 30.476809666047295
+	SteepestDescent.execute_optimization_step(): descent = [-0.7276669967407047, -0.6769495137195956, -0.10894118700185869, -0.019285110935445722]
+	SteepestDescent.execute_optimization_step(): step = [-0.09095837459258808, -0.08461868921494944, -0.013617648375232336, -0.0024106388669307153]
+		SteepestDescent.execute_optimization_step(): new_parameter = 0.2590416254074119
+		SteepestDescent.execute_optimization_step(): new_parameter = 0.16538131078505056
+		SteepestDescent.execute_optimization_step(): new_parameter = 0.2624823516247677
+		SteepestDescent.execute_optimization_step(): new_parameter = 0.12308936113306929
+	SteepestDescent.execute_optimization_step(): x_new = [0.2590416254074119, 0.16538131078505056, 0.2624823516247677, 0.12308936113306929]
+f_old = 0.12335276966609199, f_new = 0.04654233194811791, x_new = [0.2590416254074119, 0.16538131078505056, 0.2624823516247677, 0.12308936113306929] #
+			OptimizationAlgorithm.execute_optimization(): new_parameter_set = [0.2590416254074119, 0.16538131078505056, 0.2624823516247677, 0.12308936113306929]
+			OptimizationAlgorithm.execute_optimization(): new_loss_value = 0.04654233194811791
+		OptimizationAlgorithm.set_current_parameter_set(): this_dimension = 4
+		OptimizationAlgorithm.set_current_parameter_set(): self.__x = [0.2590416254074119, 0.16538131078505056, 0.2624823516247677, 0.12308936113306929]
+			OptimizationAlgorithm.execute_optimization(): self.__current_iteration = 2
+
+
+
+#######################
+Optimization finished.#
+x_opt = [0.2590416254074119, 0.16538131078505056, 0.2624823516247677, 0.12308936113306929] #
+
+
+Fflow.run(): is_finished = True
