@@ -4,11 +4,11 @@ REPOSITORY CONTENTS:
    - run the optimization workflow by calling:
      python /path/to/main.py fflow_config_file.cfg [-d] [-v]
 
-     example fflow_config_file.cfg in fflow/
+       example fflow_config_file.cfg in fflow/
      
-     use -v for verbose-mode: print essential notifications
+       use -v for verbose-mode: print essential notifications
      
-     use -d for debug-mode: print everything
+       use -d for debug-mode: print everything
 
  - opt_with_NN-Model/       -> contains the optimizations' working direcotries and result directories
                             -> can be rerun by calling maxR2/run-all.sh or minMAPE/run-all.sh
