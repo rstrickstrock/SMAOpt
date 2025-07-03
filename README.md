@@ -23,7 +23,7 @@ REPOSITORY CONTENTS:
    - contains the scripts to train the models as presented in the manuscript
      *NOTE: adaptions to the batch- or pythonscripts for the automatized MD simulation steering might be necessary. Gromacs 2024.1 and slurm 23.11.0 were used.
 
- - trainingdata_acquisition
+ - trainingdata_acquisition/
    - contains the scripts to create the data used for the surrogate model training
      *NOTE: adaptions to the batch- or pythonscripts for the automatized MD simulation steering might be necessary. Gromacs 2024.1 and slurm 23.11.0 were used.
 
