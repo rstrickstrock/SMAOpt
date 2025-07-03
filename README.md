@@ -42,3 +42,17 @@ REPOSITORY CONTENTS:
 
 
 RUNNING AN OPTIMIZATION:
+- change "cwd" in config_file.cfg to the location of config_file.cfg (e.g. /path/to/location/, when the path is /path/to/location/config_file.cfg)
+- make sure that you are using a slurm queueing software -OR- adapt the following files to circumvent slurm:
+  -  /path/to/location/density/batch_slurm_eval_PhysProp.sh
+  -  /path/to/location/density/batch_slurm_evalSurrogateModel.sh
+  -  /path/to/location/density/physprop_eval.sh
+  -  /path/to/location/density/physprop_steering.sh
+  -  /path/to/location/energies/batch_slurm_eval_RCE.sh
+  -  /path/to/location/energies/batch_slurm_RCE.sh
+  -  /path/to/location/energies/qmmm_eval.sh
+  -  /path/to/location/energies/qmmm_steering.sh
+  
+- create directories "PhysProp" and "QMMM" in /path/to/location/
+- run fflow/main.py /path/to/config_file.cfg [-d] [-v]
+an optimization example can be found in OPTIMIZATION_EXAMPLE
