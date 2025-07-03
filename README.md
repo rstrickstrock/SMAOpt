@@ -1,5 +1,16 @@
 REPOSITORY CONTENTS:
-- 
+- FFLOW_FOR_EXAMPLE/
+  - contains the optimization workflow to run the example in OPTIMIZATION_EXAMPLE/
+    *NOTE: This Code can only be used to run the example. The code is altered to enable the example to be run with only a python3 installation (no Gromacs, Amber, slurm required)
+
+- OPTIMIZATION_EXAMPLE/
+  - contains the files for the example optimization
+    *NOTE: This optimization is an example and it's purpose is to demonstrate the workflow. The Energy calculations are replaced by a dummy output and are not real values. Thus, the resulting force field parameters are meaningless.
+  - run the example by:
+    - change "cwd" in EXAMPLE_FILES/octane_hybrid_new.cfg to the location of octane_hybrid_new.cfg (e.g. /path/to/EXAMPLE_FILES/)
+    - change "cwd" in run_EXAMPLE.sh to the location of octane_hybrid_new.cfg (e.g. /path/to/EXAMPLE_FILES/)
+    - run run_EXAMPLE.sh
+    
 - fflow/
   - contains the optimization workflow
   - run the optimization workflow by calling:
